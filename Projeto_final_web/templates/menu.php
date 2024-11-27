@@ -5,6 +5,7 @@
     <a href= "?pg=calendario"> Disponibilidade </a> |
     <a href= "?pg=usuarios"> Usuários </a> |
     <a href= "?pg=contato"> Fale conosco </a> |
+    <a href= "?pg=calendario"> Solicite sua reserva </a> |
 </nav>
 
 <!--nav>
