@@ -1,6 +1,13 @@
-<?php
-function gerarCalendario($mes, $ano)
-  {
-    // Obter o numero do mês e o numero dde dias no mês
-$nomeMes = date("F", mktime(0, 0, 0, $mes,1 , $ano));
-    $diasNoMes = cal_days_in_month(call_GREGORIAN, $mes, $ano);
+<h3>Solicite Sua Reserva</h3>
+
+<form action="?pg=calendario" method="post">
+    Nome: <input type="text" name="nome" required><br>
+    Apartamento: <input type="text" name="apartamento" required><br>
+    Data: <input type="date" name="data"><br>
+    Horário Inicial: <input type="time" name="hora"><br>
+    Horário Final: <input type="time" name="hora"><br>
+    Observação: <textarea name="observacao"></textarea><br><br>
+
+    <input type="submit" value="Solicitar"><br>
+
+</form>
