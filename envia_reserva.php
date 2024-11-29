@@ -5,13 +5,13 @@
     $nome = $_REQUEST['nome'];
     $apartamento = $_REQUEST['apartamento'];
     $data = $_REQUEST['data'];
-    $horarioinicial = $_REQUEST['hora'];
-    $horariofinal = $_REQUEST['hora'];
+    $horarioinicio = $_REQUEST['horainicio'];
+    $horariofinal = $_REQUEST['horafim'];
     $observacao = $_REQUEST['observacao'];
 
-    $sql = "INSERT INTO contato
-            (nome,apartamento,data,horarioinicial, horariofinal,observacao) VALUES
-            ('$nome','$apartamento','$data','$horarioinicial','$horariofinal','$observacao')
+    $sql = "INSERT INTO reserva
+            (nome,apartamento,data,horarioinicio, horariofim,observacao) VALUES
+            ('$nome','$apartamento','$data','$horainicio', '$horafim','$observacao')
             ";
 
     $query = mysqli_query($conexao,$sql);
