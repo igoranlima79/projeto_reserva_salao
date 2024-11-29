@@ -7,7 +7,7 @@
     <style>
         /* Definir a cor de fundo para toda a página */
         body {
-            background-image: url("imagem/imagem2.jpeg"); /* Substitua pelo caminho da sua imagem */
+            background-image: url("Imagem/imagem2.jpeg"); /* Substitua pelo caminho da sua imagem */
             background-size: cover; /* A imagem cobre toda a tela */
             background-position: center; /* A imagem fica centralizada */
             font-family: Arial, sans-serif; /* Definir a fonte padrão */
