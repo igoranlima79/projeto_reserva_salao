@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29/11/2024 às 03:06
+-- Tempo de geração: 01/12/2024 às 21:40
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -42,7 +42,8 @@ CREATE TABLE `contato` (
 
 INSERT INTO `contato` (`id`, `nome`, `apartamento`, `email`, `assunto`, `mensagem`) VALUES
 (1, 'Alessandra Coelho Ferreira Lima', 101, 'alecoelho_30@yahoo.com.br', 'Reserva de Salão', 'Disponibilidade'),
-(2, 'Alessandra Coelho Ferreira Lima', 101, 'alecoelho_30@yahoo.com.br', 'Reserva de Salão', 'Teste1');
+(3, 'Matheus Coelho', 403, 'alecoelho_30@yahoo.com.br', 'Dúvida', 'Podemos reservar para o dia 5/11?'),
+(4, 'JUVENAL VICENTE FERREIRA', 403, 'juvenal@gmail.com', 'Dúvida', 'Teste');
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ INSERT INTO `contato` (`id`, `nome`, `apartamento`, `email`, `assunto`, `mensage
 CREATE TABLE `reserva` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) DEFAULT NULL,
-  `apartamento` int(3) DEFAULT NULL,
+  `apartamento` varchar(3) DEFAULT NULL,
   `data` date DEFAULT NULL,
   `horarioinicial` time DEFAULT NULL,
   `horariofinal` time DEFAULT NULL,
@@ -73,15 +74,18 @@ CREATE TABLE `usuario` (
   `email` varchar(100) DEFAULT NULL,
   `telefone` varchar(100) DEFAULT NULL,
   `cidade` varchar(100) DEFAULT NULL,
-  `estado` varchar(50) DEFAULT NULL
+  `estado` varchar(50) DEFAULT NULL,
+  `senha` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nome`, `apartamento`, `email`, `telefone`, `cidade`, `estado`) VALUES
-(1, 'Alessandra Coelho Ferreira Lima', 101, 'alecoelho_30@yahoo.com.br', '(83) 98772-0810', 'João Pessoa', 'Paraiba');
+INSERT INTO `usuario` (`id`, `nome`, `apartamento`, `email`, `telefone`, `cidade`, `estado`, `senha`) VALUES
+(1, 'Alessandra Coelho Ferreira Lima', 101, 'alecoelho_30@yahoo.com.br', '(83) 98772-0810', 'João Pessoa', 'Paraiba', NULL),
+(2, 'Matheus Coelho Ferreira Lima', 403, 'matheus@gmail.com', '(83) 99999-8888', 'João Pessoa', 'Paraiba', NULL),
+(4, 'George Piva', 102, 'george@gmail.com', '83999998888', 'João Pessoa', 'Paraiba', '123456');
 
 --
 -- Índices para tabelas despejadas
@@ -97,7 +101,8 @@ ALTER TABLE `contato`
 -- Índices de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `data` (`data`);
 
 --
 -- Índices de tabela `usuario`
@@ -113,7 +118,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`
@@ -125,7 +130,7 @@ ALTER TABLE `reserva`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

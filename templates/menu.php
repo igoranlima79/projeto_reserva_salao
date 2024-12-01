@@ -4,7 +4,7 @@
     <a href="?pg=politica" style="color: white; text-decoration: none; margin: 0 15px; font-size: 16px;">Políticas de Uso</a> |
     <a href="?pg=usuarios" style="color: white; text-decoration: none; margin: 0 15px; font-size: 16px;">Usuários</a> |
     <a href="?pg=contato" style="color: white; text-decoration: none; margin: 0 15px; font-size: 16px;">Fale conosco</a> |
-    <a href="?pg=calendario" style="color: white; text-decoration: none; margin: 0 15px; font-size: 16px;">Solicite sua reserva</a> |
+    <a href="?pg=reserva" style="color: white; text-decoration: none; margin: 0 15px; font-size: 16px;">Solicite sua reserva</a> |
 </nav>
 
 <!--nav>

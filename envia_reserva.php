@@ -5,13 +5,13 @@
     $nome = $_REQUEST['nome'];
     $apartamento = $_REQUEST['apartamento'];
     $data = $_REQUEST['data'];
-    $horarioinicio = $_REQUEST['horainicio'];
-    $horariofinal = $_REQUEST['horafim'];
+    $horarioinicio = $_REQUEST['horarioinicio'];
+    $horariofinal = $_REQUEST['horariofinal'];
     $observacao = $_REQUEST['observacao'];
 
     $sql = "INSERT INTO reserva
-            (nome,apartamento,data,horarioinicio, horariofim,observacao) VALUES
-            ('$nome','$apartamento','$data','$horainicio', '$horafim','$observacao')
+            (nome, apartamento, data, horarioinicio, horariofinal, observacao) VALUES
+            ('$nome','$apartamento','$data','$horarioinicio','$horariofinal','$observacao')
             ";
 
     $query = mysqli_query($conexao,$sql);
@@ -23,3 +23,5 @@
     }
 
     mysqli_close($conexao);
+
+    
