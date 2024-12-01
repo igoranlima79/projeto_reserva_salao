@@ -8,10 +8,11 @@
     $telefone = $_REQUEST['telefone'];
     $cidade = $_REQUEST['cidade'];
     $estado = $_REQUEST['estado'];
+    $senha = $_REQUEST['senha'];
 
     $sql = "INSERT INTO usuario
-    (nome,apartamento,email,telefone,cidade,estado) VALUES
-    ('$nome','$apartamento','$email','$telefone','$cidade','$estado')";
+    (nome,apartamento,email,telefone,cidade,estado,senha) VALUES
+    ('$nome','$apartamento','$email','$telefone','$cidade','$estado','$senha')";
 
     $query = mysqli_query($conexao,$sql);
 

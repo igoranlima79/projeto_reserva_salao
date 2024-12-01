@@ -8,10 +8,10 @@
 
     $query = mysqli_query($conexao,$sql);
 
-    while($cliente = mysqli_fetch_array($query)){
+    while($usuario = mysqli_fetch_array($query)){
 
 ?>
-<h3>Cadastrar novo usuário </h3>
+<h3>Alterar usuário </h3>
 
 <form action="?pg=altera_usuario&id=<?= $usuario['id'];?>" method="post">
   
@@ -20,8 +20,9 @@
   E-mail: <input type="text" name="email" value="<?= $usuario['email'];?>"> <br>
   Telefone: <input type="text" name="telefone" value="<?= $usuario['telefone'];?>"> <br>
   Cidade: <input type="text" name="cidade" value="<?= $usuario['cidade'];?>"> <br>
-  Estado: <input type="text" name="estado" value="<?= $usuario['estado'];?>"> <br><br>
- <input type="submit" value="Cadastrar">
+  Estado: <input type="text" name="estado" value="<?= $usuario['estado'];?>"> <br>
+  Senha: <input type="password" name="senha" value="<?= $usuario['senha'];?>"> <br><br>
+ <input type="submit" value="Salvar">
 </form>
 
 <?php

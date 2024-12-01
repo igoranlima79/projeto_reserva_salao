@@ -4,8 +4,8 @@
 
     $id = $_REQUEST['id'];
 
-    $sql = mysqli_query($conexao,"DELETE FROM cliente WHERE id = $id");
+    $sql = mysqli_query($conexao,"DELETE FROM usuario WHERE id = $id");
 
     mysqli_close($conexao);
 
-    echo "<h2>Cliente excluído.</h2>";
+    echo "<h2>Usuário excluído.</h2>";

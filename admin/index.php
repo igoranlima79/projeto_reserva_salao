@@ -80,7 +80,8 @@
     <nav>
         <a href="?pg=lista_msg">Lista de Mensagens</a> |
         <a href="?pg=form_usuario">Cadastrar Usuários</a> |
-        <a href="?pg=lista_usuario">Lista de Usuários</a>
+        <a href="?pg=lista_usuario">Lista de Usuários</a> |
+        <a href="?pg=lista_reserva">Reservas Solicitadas</a>
     </nav>
     
     <?php
