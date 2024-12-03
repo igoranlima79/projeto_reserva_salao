@@ -13,7 +13,7 @@
 
     $sql = "UPDATE usuario SET
     nome = '$nome', apartamento = '$apartamento',email = '$email',telefone = '$telefone',
-    cidade = '$cidade',estado = '$estado', senha '$senha' WHERE id = $id";
+    cidade = '$cidade',estado = '$estado', senha = '$senha' WHERE id = $id";
 
     $query = mysqli_query($conexao,$sql);
 
