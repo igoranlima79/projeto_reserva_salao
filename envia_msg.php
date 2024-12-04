@@ -5,17 +5,16 @@
     $nome = $_REQUEST['nome'];
     $apartamento = $_REQUEST['apartamento'];
     $email = $_REQUEST['email'];
-    $evento = $_REQUEST['evento'];
+    $assunto = $_REQUEST['assunto'];
     $mensagem = $_REQUEST['mensagem'];
-    $telefone = $_REQUEST['telefone'];
-
 
     $sql = "INSERT INTO contato
             (nome,apartamento,email,assunto,mensagem) VALUES
-            ('$nome','$apartamento','$telefone','$email','$assunto','$mensagem')
+            ('$nome','$apartamento','$email','$assunto','$mensagem')
             ";
 
     $query = mysqli_query($conexao,$sql);
+
 
     if($query){
         echo "<h3> Mensagem enviada com sucesso.</h3>";
