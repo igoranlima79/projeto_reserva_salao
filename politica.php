@@ -3,7 +3,7 @@
 
   <p><strong>Reserva:</strong> O salão deve ser reservado na administração ou pelo sistema online. Reservas são confirmadas mediante pagamento da taxa (se aplicável).</p>
   
-  <p><strong>Horário:</strong> Permitido entre <em>[horário de início]</em> e <em>[horário de término]</em>, respeitando o horário de silêncio (<em>[especificar horário]</em>).</p>
+  <p><strong>Horário:</strong> Permitido entre 08:00 e 23:59, respeitando o horário de silêncio a partir das 22:00.</p>
   
   <p><strong>Responsabilidade:</strong> O responsável deve devolver o salão nas mesmas condições recebidas. Danos serão cobrados.</p>
   
