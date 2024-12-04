@@ -12,9 +12,6 @@
     <label for="email" style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">E-mail:</label>
     <input type="email" name="email" id="email" required style="width: 100%; padding: 10px; margin-bottom: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"><br>
 
-    <label for="telefone" style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">Telefone:</label>
-    <input type="text" name="telefone" id="telefone" required style="width: 100%; padding: 10px; margin-bottom: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"><br>
-
     <label for="assunto" style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">Assunto:</label>
     <input type="text" name="assunto" id="assunto" required style="width: 100%; padding: 10px; margin-bottom: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"><br>
 
