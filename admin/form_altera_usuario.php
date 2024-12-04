@@ -1,33 +1,30 @@
 <?php
-include_once("../config.inc.php");
 
-$id = $_REQUEST['id'];
+    include_once("../config.inc.php");
 
-// Recuperar dados do usuário
-$sql = "SELECT * FROM usuario WHERE id = ?";
-$stmt = mysqli_prepare($conexao, $sql);
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
+    $id = $_REQUEST['id'];
 
-if ($usuario = mysqli_fetch_assoc($result)) {
+    $sql = "SELECT * FROM usuario WHERE id = $id";
+
+    $query = mysqli_query($conexao,$sql);
+
+    while($usuario = mysqli_fetch_array($query)){
+
 ?>
-    <h3>Alterar Usuário</h3>
-    <form action="?pg=altera_usuario&id=<?= htmlspecialchars($usuario['id']); ?>" method="post">
-        Nome: <input type="text" name="nome" value="<?= htmlspecialchars($usuario['nome']); ?>"> <br>
-        Apartamento: <input type="text" name="apartamento" value="<?= htmlspecialchars($usuario['apartamento']); ?>"> <br>
-        E-mail: <input type="email" name="email" value="<?= htmlspecialchars($usuario['email']); ?>"> <br>
-        Telefone: <input type="text" name="telefone" value="<?= htmlspecialchars($usuario['telefone']); ?>"> <br>
-        Cidade: <input type="text" name="cidade" value="<?= htmlspecialchars($usuario['cidade']); ?>"> <br>
-        Estado: <input type="text" name="estado" value="<?= htmlspecialchars($usuario['estado']); ?>"> <br>
-        Senha: <input type="password" name="senha" placeholder="Digite uma nova senha (opcional)"> <br><br>
-        <input type="submit" value="Salvar">
-    </form>
-<?php
-} else {
-    echo "<p>Usuário não encontrado.</p>";
-}
+<h3>Alterar usuário </h3>
 
-mysqli_stmt_close($stmt);
-mysqli_close($conexao);
+<form action="?pg=altera_usuario&id=<?= $usuario['id'];?>" method="post">
+  
+  Nome: <input type="text" name="nome" value="<?= $usuario['nome'];?>"> <br>
+  Apartamento: <input type="text" name="apartamento" value="<?= $usuario['apartamento'];?>"> <br>
+  E-mail: <input type="text" name="email" value="<?= $usuario['email'];?>"> <br>
+  Telefone: <input type="text" name="telefone" value="<?= $usuario['telefone'];?>"> <br>
+  Cidade: <input type="text" name="cidade" value="<?= $usuario['cidade'];?>"> <br>
+  Estado: <input type="text" name="estado" value="<?= $usuario['estado'];?>"> <br>
+  Senha: <input type="password" name="senha" value="<?= $usuario['senha'];?>"> <br><br>
+ <input type="submit" value="Salvar">
+</form>
+
+<?php
+    }
 ?>

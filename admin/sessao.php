@@ -1,6 +1,10 @@
 <?php
 
-    function logado() {
+function logado() {
+    // Inicia a sessão apenas se necessário
+    if (session_status() === PHP_SESSION_NONE) {
         session_start();
-        return isset($_SESSION['user_id']);
     }
+    // Verifica se o ID do usuário está configurado
+    return isset($_SESSION['id']) && !empty($_SESSION['id']);
+}
